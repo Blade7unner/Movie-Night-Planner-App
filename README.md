@@ -1,23 +1,18 @@
-# Music Library Organizer
+# Movie Night Planner App
 
-## Table of Contents
+## Overview
+Movie Night Planner is a beginner-friendly web app designed to make organizing movie nights easy. Choose films, set dates, and invite friends - all in one place.
 
-- [Introduction](#introduction)
-- [User Story](#user-story)
-- [Motivation](#motivation)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [How to Use](#how-to-use)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+## Features
+- **Movie Selection**: Browse and pick movies.
+- **Event Scheduling**: Choose dates for movie nights.
+- **Digital Invitations**: Send invites to friends.
+- **Responsive Design**: Works on all devices.
 
-## Introduction
-
-Music Library Organizer is an interactive full-stack web application designed for music enthusiasts to manage and enjoy their music collection online. This application allows users to access, organize, and interact with their music library from anywhere, providing a seamless and personalized experience.
-
-## User Story
-
-> As a music enthusiast, I want to organize my music collection online, so I can access, manage, and enjoy my music from anywhere.
+- ## Technologies
+- **Frontend**: Handlebars.js
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL, Sequelize ORM
+- **Authentication**: Express-session, cookies
+- **API Integration**: Movie database for film details
+- **Deployment**: Heroku
