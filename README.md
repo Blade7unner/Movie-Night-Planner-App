@@ -1,18 +1,32 @@
-# Movie Night Planner App
+# Movie Night Planner
 
-## Overview
-Movie Night Planner is a beginner-friendly web app designed to make organizing movie nights easy. Choose films, set dates, and invite friends - all in one place.
+## User Story
+As a user, I want to easily plan a movie night with friends, including choosing movies, scheduling, and sending invitations, so that I can organize a fun and stress-free movie night.
 
-## Features
-- **Movie Selection**: Browse and pick movies.
-- **Event Scheduling**: Choose dates for movie nights.
-- **Digital Invitations**: Send invites to friends.
-- **Responsive Design**: Works on all devices.
+## Description
+The "Movie Night Planner" is a web application that simplifies planning movie events. Users can select films, set dates, and send invites. The app integrates modern technologies like Node.js and Express.js, and a movie API for comprehensive film information.
 
-- ## Technologies
-- **Frontend**: Handlebars.js
-- **Backend**: Node.js, Express.js
-- **Database**: MySQL, Sequelize ORM
-- **Authentication**: Express-session, cookies
-- **API Integration**: Movie database for film details
-- **Deployment**: Heroku
+## Technologies Used
+- Node.js
+- Express.js
+- Handlebars.js
+- MySQL with Sequelize ORM
+- AWS Amazon Notification Service (Text notifications)
+- Sendgrid (Email notifications)
+- OMDb API (The Open Movie Database)
+- Heroku (Deployment)
+
+## Distribution of Tasks
+- Felipe / David: Front-end design with Handlebars.js, testing, and Heroku deployment.
+- Sarahy / Javier: Back-end logic, Node.js and Express.js API development, database management with MySQL and Sequelize ORM.
+
+## Installation
+[Steps for installation]
+
+## Contributing
+[Contribution guidelines]
+
+## License
+[License]
+
+
