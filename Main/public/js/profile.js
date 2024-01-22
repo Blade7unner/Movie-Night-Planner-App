@@ -1,14 +1,15 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
+  // changed const names to match the names in the html
+  const movie_name = document.querySelector('#movie-name').value.trim();
+  const event_date = document.querySelector('#event-date').value.trim();
+  const event_location = document.querySelector('#event-location').value.trim();
+  const invitees = document.querySelector('#invitees').value.trim();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
-
-  if (name && needed_funding && description) {
+  if (movie_name && event_date && event_location && invitees) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({ movie_name, event_date, event_location, invitees }),
       headers: {
         'Content-Type': 'application/json',
       },
