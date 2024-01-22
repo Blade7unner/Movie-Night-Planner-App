@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class MovieNight extends Model {}
+class Project extends Model {}
 
-MovieNight.init(
+Project.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,16 +11,15 @@ MovieNight.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    event_name: {
+    movie_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     event_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    location: {
+    event_location: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -41,8 +40,8 @@ MovieNight.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'movie_night',
+    modelName: 'project',
   }
 );
 
-module.exports = MovieNight;
+module.exports = Project;
