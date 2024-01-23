@@ -3,14 +3,14 @@
   <div class="col-md-5">
     <h2>
       <!-- selected movie name -->
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-      <p>on (Date Selected by User)</p>
+      <a href="/project/{{project.id}}">{{project.movie_name}}</a>
+      <p>on {{project.event_date}}</p>
     </h2>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+    <p>Created by {{project.user.name}}</p>
   </div>
   <div class="col-md-7">
-    <p>(Location)</p>
-    <p>(Number of Attendees)</p>
+    <p>{{project.event_location}}</p>
+    <p>{{project.invitees}}</p>
   </div>
 </div>
 {{/each}}

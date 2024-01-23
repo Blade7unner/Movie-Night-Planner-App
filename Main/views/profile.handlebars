@@ -1,11 +1,16 @@
 <head>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <script>
     $(document).ready(function () {
-      $(function () {
-        $('#event-date').datepicker();
+      flatpickr('#event-date', {
+        enableTime: true,
+        dateFormat: 'Y-m-d h:iK',
+        minDate: 'today',
       });
       $("#movie-name").autocomplete({
         source: function (request, response) {
@@ -56,7 +61,7 @@
             <input class="form-input" type="text" id="movie-name" name="movie-name" />
           </div>
           <div class="form-group">
-            <label for="event-date">Event Date:</label>
+            <label for="event-date">Event Date and Time:</label>
             <input class="form-input" type="text" id="event-date" name="event-date" />
           </div>
           <div class="form-group">
