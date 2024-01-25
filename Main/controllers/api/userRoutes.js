@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-const { sendEmail } = require('../utils/emailService'); // Adjust the path as necessary
+const { sendEmail } = require('../../utils/emailService'); // Adjust the path as necessary
 
 // Endpoint to handle user registration
 router.post('/', async (req, res) => {

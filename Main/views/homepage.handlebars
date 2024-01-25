@@ -1,16 +1,16 @@
-{{#each projects as |project| }}
-<div class="row mb-4 project">
+{{#each events as |event| }}
+<div class="row mb-4 event">
   <div class="col-md-5">
     <h2>
       <!-- selected movie name -->
-      <a href="/project/{{project.id}}">{{project.movie_name}}</a>
-      <p>on {{project.event_date}}</p>
+      <a href="/event/{{event.id}}">{{event.movie_name}}</a>
+      <p>on {{event.event_date}}</p>
     </h2>
-    <p>Created by {{project.user.name}}</p>
+    <p>Created by {{event.user.name}}</p>
   </div>
   <div class="col-md-7">
-    <p>{{project.event_location}}</p>
-    <p>{{project.invitees}}</p>
+    <p>{{event.event_location}}</p>
+    <p>{{event.invitees}}</p>
   </div>
 </div>
 {{/each}}
