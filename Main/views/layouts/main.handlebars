@@ -1,52 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Let's Watch a Movie!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <style>
-    body {
-      background-color: #1E1E1E;
-      /* Dark background color */
-      color: #FFFFFF;
-      /* Light text color */
-    }
-  </style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollywood Movie Night</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            background-color: #000000;
+            /* Black background color */
+            color: #FFFFFF;
+            /* White text color */
+            font-family: 'Arial Black', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Define Flexbox styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #D50000;
+            /* Hollywood red */
+            color: #FFFFFF;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            background-color: #111111;
+            /* Dark gray background color for content */
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #D50000;
+            /* Hollywood red for the footer */
+            padding: 1rem 0;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">🎥</span>
-        <a href="/">Let's Watch a Movie!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+<div class="container">
+    <header>
+        <h1>
+            <span role="img" aria-label="money">🎬</span>
+            <a href="/">Hollywood Movie Night</a>
+        </h1>
+        <nav>
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <a href="/profile">Profile</a>
+            <button class="no-button" id="logout">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </nav>
     </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
+    <main class="container-fluid mt-5">
+        <!-- Render the sub layout -->
+        {{{ body }}}
     </main>
     <footer>
-
+        &copy; 2024 Hollywood Movie Night
     </footer>
-  </div>
+</div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+<!-- Render script for logged-in users only -->
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
 </body>
-
 </html>
