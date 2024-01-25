@@ -78,17 +78,17 @@
         </form>
       </div>
 
-      {{#if projects.length}}
-      <div class="col-md-6 project-list">
+      {{#if events.length}}
+      <div class="col-md-6 event-list">
         <h3>Upcoming Events:</h3>
 
-        {{#each projects as |project|}}
+        {{#each events as |event|}}
         <div class="row mb-2">
           <div class="col-md-8">
-            <h4><a href="/project/{{project.id}}">{{project.movie_name}}</a></h4>
+            <h4><a href="/event/{{event.id}}">{{event.movie_name}}</a></h4>
           </div>
           <div class="col-md-4">
-            <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+            <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
           </div>
         </div>
         {{/each}}
