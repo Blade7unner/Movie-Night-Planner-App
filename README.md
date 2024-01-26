@@ -18,7 +18,7 @@ The "Movie Night Planner" is a web application that simplifies planning movie ev
 - **Database**: MySQL with Sequelize ORM
 - **Authentication**: Express-session, cookies
 - **API Integration**: OMDb API (The Open Movie Database)
-- **Notification Services**: AWS Amazon Notification Service (Text notifications), Sendgrid (Email notifications)
+- **Notification Services**: Sendgrid (Email notifications)
 - **Deployment**: Heroku
 
 
