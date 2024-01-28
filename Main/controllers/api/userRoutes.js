@@ -11,8 +11,8 @@ router.post('/', async (req, res) => {
     const emailOptions = {
       from: process.env.EMAIL_USER,
       to: userData.email,
-      subject: 'Welcome to Our Platform!',
-      text: 'Thank you for signing up for our platform. Enjoy our services!',
+      subject: 'Welcome to Film Fiesta!',
+      text: 'Thank you for signing up for Film Fiesta. Enjoy our services and have great movie nights with your friends!',
     };
     
     await sendEmail(emailOptions);
