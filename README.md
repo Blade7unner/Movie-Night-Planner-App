@@ -42,12 +42,7 @@ To install and run this application on your local machine, follow these steps:
    DB_NAME='your_database_name'          # The name of the MySQL database you want to use
    DB_USER='your_database_username'      # Your MySQL username
    DB_PASS='your_database_password'      # Your MySQL password
-
-   # API keys
-   OMDB_API_KEY='your_omdb_api_key'      # Your API key for OMDb API
-   SENDGRID_API_KEY='your_sendgrid_api_key'  # Your API key for SendGrid
-
-
+   
 5. Create the database using the schema file in the `db` directory.
 
 6. Seed the database with initial data if provided: npm run seed
