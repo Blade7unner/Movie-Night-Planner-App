@@ -1,3 +1,9 @@
+/* Override Water.css styles */
+body {
+  background-color: #000000; /* Black Background */
+}
+
+/* Your existing styles with colors retained */
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -22,3 +28,5 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+/* Rest of your styles... */

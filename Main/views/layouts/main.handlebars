@@ -3,162 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hollywood Movie Night</title>
-    <link rel="stylesheet" href="/css/jass.css">
+    <title>Film Fiesta</title>
+    <!-- Include Water.css for default styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- Include Custom style -->
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        body {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: 'Arial Black', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .banner {
-            width: 100%;
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensures the image takes the full width available */
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            justify-content: space-between;
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center title vertically */
-            padding: 1rem;
-            background-color: #DC143C;
-            color: #FFFFFF;
-        }
-
-        nav {
-            display: flex;
-            gap: 1rem;
-        }
-
-        main {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            background-color: #111111;
-        }
-
-        .form-container {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .form-box {
-            background-color: #202020;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .form-box h2 {
-            color: #FFFFFF;
-            text-align: center;
-        }
-
-        .form-box label {
-            display: block;
-            margin-bottom: .5rem;
-        }
-
-        .form-box input[type="text"],
-        .form-box input[type="email"],
-        .form-box input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 1rem;
-            border-radius: 4px;
-            border: 1px solid #555;
-            background-color: #333;
-            color: #FFFFFF;
-        }
-
-        .form-box button {
-            width: 100%;
-            padding: 10px;
-            margin-top: .5rem;
-            border-radius: 4px;
-            border: none;
-            background-color: #DC143C;
-            color: #FFFFFF;
-            cursor: pointer;
-        }
-
-        .form-box button:hover {
-            background-color: #A10F2B;
-        }
-
-        footer {
-            background-color: #DC143C;
-            padding: 1rem 0;
-            text-align: center;
-            color: #FFFFFF;
-        }
-
-        /* Styles for the title and emojis */
-        .title-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .movie-emoji {
-            font-size: 2rem; /* Adjust the size as needed */
-            margin: 0 1rem; /* Add spacing between emojis and title */
-        }
-
-        /* Other styles... */
-    </style>
+    <!-- Include Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <img src="banner-for-header.jpg" alt="Banner" class="banner">
-    <header>
-        <div class="title-container">
-            <div class="movie-emoji">🎬</div>
-            <h1>Hollywood Movie Night</h1>
-            <div class="movie-emoji">🎬</div>
+    <div class="container">
+        <div id="banner-for-header">
+            <img src="/Assets/banner-for-header.jpg" alt="Header Banner">
         </div>
-        <!-- Navigation and other header elements... -->
-    </header>
-    <main>
-        <div class="form-container">
-            <div class="form-box">
-                <h2>Login</h2>
-                <label for="login-email">Email:</label>
-                <input type="email" id="login-email" name="email" required>
-                <label for="login-password">Password:</label>
-                <input type="password" id="login-password" name="password" required>
-                <button type="submit">Login</button>
+        <header>
+            <div class="title-container">
+                <!-- Remove or comment out the emoji spans -->
+                <!-- <span class="movie-emoji">🎬</span> -->
+                <h1>Film Fiesta</h1>
+                <!-- <span class="movie-emoji">🎬</span> -->
             </div>
-            <div class="form-box">
-                <h2>Signup</h2>
-                <label for="signup-name">Name:</label>
-                <input type="text" id="signup-name" name="name" required>
-                <label for="signup-email">Email:</label>
-                <input type="email" id="signup-email" name="email" required>
-                <label for="signup-password">Password:</label>
-                <input type="password" id="signup-password" name="password" required>
-                <button type="submit">Signup</button>
+            <nav>
+                {{#if logged_in}}
+                <button><a href="/">HOME</a></button>
+                <button><a href="/profile">PROFILE</a></button>
+                <button id="logout">LOGOUT</button>
+                {{/if}}
+            </nav>
+        </header>
+        <section id="about">
+            <h2>About Film Fiesta:</h2>
+            <p>Welcome to Film Fiesta, the ultimate destination for movie enthusiasts. Discover, discuss, and delve into the world of cinema with us.</p>
+        </section>
+        <main class="container-fluid mt-5">
+            <div class="form-container">
+                <div class="form-box">
+                    <!-- Login Form -->
+                    <h3>Login</h3>
+                    <!-- Login form here -->
+                    <form action="/login" method="post">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="form-box">
+                    <!-- Signup Form -->
+                    <h3>Sign Up</h3>
+                    <!-- Signup form here -->
+                    <form action="/signup" method="post">
+                        <label for="newUsername">Username:</label>
+                        <input type="text" id="newUsername" name="newUsername" required>
+                        <label for="newPassword">Password:</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        &copy; 2024 Hollywood Movie Night
-    </footer>
-</div>
+        </main>
+        <footer>
+            &copy; 2024 Film Fiesta
+        </footer>
+    </div>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
