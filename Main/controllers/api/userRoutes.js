@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
 
     // Send a welcome email to the new user
     const emailOptions = {
-      from: process.env.EMAIL_USER,
+      from: "javiselectronicpidgeon@outlook.com",
       to: userData.email,
       subject: 'Welcome to Film Fiesta!',
       text: 'Thank you for signing up for Film Fiesta. Enjoy our services and have great movie nights with your friends!',
