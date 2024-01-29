@@ -43,7 +43,7 @@ To install and run this application on your local machine, follow these steps:
    DB_USER='your_database_username'      # Your MySQL username
    DB_PASS='your_database_password'      # Your MySQL password
    
-5. Create the database using the schema file in the `db` directory.
+5. Create the database using the schema file in the `db` directory
 
 6. Seed the database with initial data if provided: npm run seed
 
@@ -55,8 +55,8 @@ Now the application should be running on `http://localhost:3000` (or another por
 
 ## Distribution of Tasks
 
-- Felipe / David: Front-end design using Handlebars.js, application testing, and deployment on Heroku.
-- Sarahy / Javier: Back-end server logic, Node.js and Express.js API development, and database schema design and management with MySQL and Sequelize ORM.
+- Felipe / David: Front-end design.
+- Sarahy / Javier: Back-end server logic.
 
 ## Contributing
 
