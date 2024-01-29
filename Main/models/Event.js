@@ -16,7 +16,7 @@ Event.init(
       allowNull: false,
     },
     event_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     event_location: {
