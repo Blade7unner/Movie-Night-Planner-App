@@ -28,8 +28,8 @@
             </div>
             <nav>
                 {{#if logged_in}}
-                <button><a href="/">HOME</a></button>
-                <button><a href="/profile">PROFILE</a></button>
+                <a href="/"><button>HOME</button></a>
+                <a href="/profile"><button>PROFILE</button></a>
                 <button id="logout">LOGOUT</button>
                 {{/if}}
             </nav>
@@ -38,7 +38,6 @@
             <div class="form-container">
                 <div class="form-box">
                     <!-- Login Form -->
-                    <h3>Login</h3>
                     <!-- Login form here -->
                     <main class="container-fluid mt-5">
                         <!-- Render the sub layout -->
@@ -50,8 +49,7 @@
         <footer>
             <section id="about">
                 <h2>About Film Fiesta:</h2>
-                <p>Welcome to Film Fiesta, the ultimate destination for movie enthusiasts. Discover, discuss, and delve
-                    into the world of cinema with us.</p>
+                <p>Welcome to Film Fiesta, the ultimate destination for movie enthusiasts. Discover, discuss, and delve into the world of cinema with us.</p>
             </section>
             &copy; 2024 Film Fiesta
         </footer>

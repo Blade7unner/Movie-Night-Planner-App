@@ -23,10 +23,49 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+h1 {
+  text-align: center;
 }
 
-/* Rest of your styles... */
+nav {
+  margin-bottom: 20px;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+nav button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+a {
+  display: block;
+  width: 100px;
+  height: 50px;
+}
+
+#logout:hover {
+  background-color: #ff0000;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 a {
+  color:#ba84c7;
+  font-size: 20px;
+}
+
+h4 button {
+  padding: 5px;
+  margin-left: 20px;
+  background-color: #8b0b0b;
+}
+
+#events-home p {
+  display:inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
