@@ -58,7 +58,4 @@ Now the application should be running on `http://localhost:3000` (or another por
 - Felipe / David: Front-end design.
 - Sarahy / Javier: Back-end server logic.
 
-## Contributing
-
-## License
 
