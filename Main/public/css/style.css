@@ -28,7 +28,8 @@ h1 {
 }
 
 nav {
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: inline-flex;
   justify-content: center;
   width: 100%;
@@ -40,8 +41,6 @@ nav button {
 
 a {
   display: block;
-  width: 100px;
-  height: 50px;
 }
 
 #logout:hover {
@@ -52,15 +51,8 @@ h3 {
   font-size: 28px;
 }
 
-h4 a {
-  color:#ba84c7;
+h4 {
   font-size: 20px;
-}
-
-h4 button {
-  padding: 5px;
-  margin-left: 20px;
-  background-color: #8b0b0b;
 }
 
 #events-home p {
