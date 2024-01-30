@@ -55,7 +55,7 @@ Now the application should be running on `http://localhost:3000` (or another por
 
 ## Distribution of Tasks
 
-- Felipe / David: Front-end design.
-- Sarahy / Javier: Back-end server logic.
+- Felipe / Sarahy: Front-end design.
+- David / Javier: Back-end server logic.
 
 
