@@ -38,6 +38,8 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/profile');
+    } if (password.length < 8) {
+      alert('Password must be at least 8 characters long');
     } else {
       alert(response.statusText);
     }
